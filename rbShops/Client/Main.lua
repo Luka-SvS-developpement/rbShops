@@ -87,7 +87,7 @@ AddEventHandler("RevengeShops:ShopResult", function(result, price, money)
     if result == 1 then
         ShowAdvNotif("Épicerie", "Informations", "Merci de votre achat de ~g~"..math.floor(price).."$~n~Mode de paiement: ~y~"..ChoixPaiement, 'CHAR_BANK_FLEECA', 1)
         PlaySoundFrontend(-1, "PURCHASE", "HUD_LIQUOR_STORE_SOUNDSET", 1)
-    elseif result == '2 then
+    elseif result == 2 then
         ShowAdvNotif("Épicerie", "Informations", "Désolé mais vous ~r~n'avez pas~s~ assez!~n~Il vous manque: ~r~"..math.floor(price-money).."$", 'CHAR_BLOCKED', 1)
         PlaySoundFrontend(-1, "Pin_Bad", "DLC_HEIST_BIOLAB_PREP_HACKING_SOUNDS", 1)
     end
