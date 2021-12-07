@@ -15,17 +15,17 @@ AddEventHandler("RevengeShops:BuyThisItem", function(_src, xItem, xCount, xPrice
                 if xLiquide >= xPrice then
                     xPlayer.removeMoney(math.floor(xPrice))
                     xPlayer.addInventoryItem(xItem, xCount)
-                    TriggerClientEvent("RevengeShops:ShopResult", _src, 'yes', xPrice, xLiquide)
+                    TriggerClientEvent("RevengeShops:ShopResult", _src, 1, xPrice, xLiquide)
                 else
-                    TriggerClientEvent("RevengeShops:ShopResult", _src, 'no', xPrice, xLiquide)
+                    TriggerClientEvent("RevengeShops:ShopResult", _src, 2, xPrice, xLiquide)
                 end
             elseif ChoixPaiement == 'Banque' then
                 if xBank >= xPrice then
                     xPlayer.removeAccountMoney('bank', math.floor(xPrice))
                     xPlayer.addInventoryItem(xItem, xCount)
-                    TriggerClientEvent("RevengeShops:ShopResult", _src, 'yes', xPrice, xBank)
+                    TriggerClientEvent("RevengeShops:ShopResult", _src, 1, xPrice, xBank)
                 else
-                    TriggerClientEvent("RevengeShops:ShopResult", _src, 'no', xPrice, xBank)
+                    TriggerClientEvent("RevengeShops:ShopResult", _src, 2, xPrice, xBank)
                 end
             end
         else
