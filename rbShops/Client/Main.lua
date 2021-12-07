@@ -2,11 +2,11 @@
 ESX, MenuActive = nil, false TriggerEvent('esx:getSharedObject', function(lib) ESX = lib end)
 
 local markerAction = function(action)
-    if action == 'in' then
+    if action == 1 then
         upDown = false
         MTaille = 0.40
         Opacity = 35
-    elseif action == 'out' then
+    elseif action == 2 then
         upDown = true
         MTaille = 0.6
         Opacity = 80
@@ -52,11 +52,11 @@ CreateThread(function()
                 if pDist <= 10.0 then
                     MarkerOptions = Configuration.Options.Marker
                     DrawMarker(MarkerOptions.Type, MarkerPos, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, MTaille, MTaille, MTaille, MarkerOptions.Couleur.r, MarkerOptions.Couleur.g, MarkerOptions.Couleur.b, Opacity, upDown, false)
-                    markerAction('out')
+                    markerAction(2)
 
                     if pDist <= 0.8 then
                         MarkerPos = MarkerPos
-                        markerAction('in')
+                        markerAction(1)
                         ShowHelpNotification("Appuyez sur ~INPUT_CONTEXT~ pour ~b~parler~s~ à ~c~"..Configuration.Options.PedName)
 
                         if IsControlJustReleased(0, 38) then
@@ -84,10 +84,10 @@ end)
 
 RegisterNetEvent("RevengeShops:ShopResult")
 AddEventHandler("RevengeShops:ShopResult", function(result, price, money)
-    if result == 'yes' then
+    if result == 1 then
         ShowAdvNotif("Épicerie", "Informations", "Merci de votre achat de ~g~"..math.floor(price).."$~n~Mode de paiement: ~y~"..ChoixPaiement, 'CHAR_BANK_FLEECA', 1)
         PlaySoundFrontend(-1, "PURCHASE", "HUD_LIQUOR_STORE_SOUNDSET", 1)
-    elseif result == 'no' then
+    elseif result == '2 then
         ShowAdvNotif("Épicerie", "Informations", "Désolé mais vous ~r~n'avez pas~s~ assez!~n~Il vous manque: ~r~"..math.floor(price-money).."$", 'CHAR_BLOCKED', 1)
         PlaySoundFrontend(-1, "Pin_Bad", "DLC_HEIST_BIOLAB_PREP_HACKING_SOUNDS", 1)
     end
