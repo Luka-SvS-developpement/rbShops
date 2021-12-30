@@ -1,7 +1,7 @@
 # rbShops
 • Script de superettes simple optimisé, et sécurisé  
 • Framework: ESX  
-• Lib utilisée: RageUI V2 (Modifié par mes soins)  
+• Lib utilisée: RageUI V2
 
 ![unknown](https://user-images.githubusercontent.com/76884751/144664638-f6e47c19-0536-4f96-9a82-a72aad202d05.png)
 
