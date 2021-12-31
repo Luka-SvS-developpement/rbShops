@@ -14,5 +14,5 @@
 • Kick si cheater
 
 # Social Medias
-**Black-DEV** - [Discord](https://discord.gg/SnepSPudds)  
+**Black-DEV** - [Discord](https://discord.gg/5DstUy6qur)  
 **FiveM Menus** - [Discord](https://discord.gg/eCAZveXq7X)
