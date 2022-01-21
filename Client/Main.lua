@@ -87,10 +87,10 @@ end)
 
 RegisterNetEvent("RevengeShops:ShopResult")
 AddEventHandler("RevengeShops:ShopResult", function(result, price, money)
-    if result == 1 then
+    if result then
         _rbShopsClientUtils.ShowAdvNotif("Épicerie", "Informations", ("Merci de votre achat de ~g~%s$~n~Mode de paiement: ~y~%s"):format(math.floor(price), ChoixPaiement), 'CHAR_BANK_FLEECA', 1)
         PlaySoundFrontend(-1, "PURCHASE", "HUD_LIQUOR_STORE_SOUNDSET", 1)
-    elseif result == 2 then
+    else
         _rbShopsClientUtils.ShowAdvNotif("Épicerie", "Informations", ("Désolé mais vous ~r~n'avez pas~s~ assez!~n~Il vous manque: ~r~%s$"):format(math.floor(price-money)), 'CHAR_BLOCKED', 1)
         PlaySoundFrontend(-1, "Pin_Bad", "DLC_HEIST_BIOLAB_PREP_HACKING_SOUNDS", 1)
     end
