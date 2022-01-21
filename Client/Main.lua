@@ -14,6 +14,10 @@ local markerAction = function(action)
     return action
 end
 
+local isPlayerOnZone = function(zone)
+	return #(GetEntityCoords(PlayerPedId())-zone)
+end)
+
 -- > Blips
 CreateThread(function()
     for _, v in pairs(Configuration.Superettes) do
@@ -44,9 +48,8 @@ CreateThread(function()
 
             local pPed = PlayerPedId()
             local pCoords = GetEntityCoords(pPed)
-            local pDist = #(pCoords-MarkerPos)
         
-            if pDist < 15.0 then
+            if isPlayerOnZone(MarkerPos) < 15.0 then
                 interval = 1
 
                 if pDist <= 10.0 then
