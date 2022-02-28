@@ -16,7 +16,7 @@ end
 
 local isPlayerOnZone = function(zone)
 	return #(GetEntityCoords(PlayerPedId())-zone)
-end)
+end
 
 -- > Blips
 CreateThread(function()
