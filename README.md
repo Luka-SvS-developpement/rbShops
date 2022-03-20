@@ -13,6 +13,6 @@
 • Vidéo presentation - [Preview](https://www.youtube.com/watch?v=szOfXIpl0Rw)  
 • Kick si cheater
 
-# Social Medias
-**Black-DEV** - [Discord](https://discord.gg/5DstUy6qur)  
-**FiveM Menus** - [Discord](https://discord.gg/eCAZveXq7X)
+# https://discord.gg/fvREQYVAqR
+
+SvS-developpement
